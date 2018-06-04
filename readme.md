@@ -1,10 +1,10 @@
-# 简易的定时任务队列
+# Simple Task Queue
 
-## 启动
+## Start
 
 * go run main.go
 
-## 添加任务
+## Add Task
 ```
 curl -X POST localhost:8103 -d '{"id":"print-tim","cmd":"date","args":["-R"],"interval":5000}'
 ```
@@ -14,7 +14,7 @@ respon
 {"ok":true,"error":"","id":"print-time","cmd":"","args":null,"interval":0}
 ```
 
-## 删除任务
+## Delete Task
 ```
 curl -X DELETE localhost:8103 -d ' {"id":"print-time"}'
 ```
